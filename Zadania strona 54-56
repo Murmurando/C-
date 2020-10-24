@@ -1,0 +1,87 @@
+Zadanie 1
+
+using System;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double F, C;
+            Console.WriteLine("Podaj temp.w stopniach Fahrenheita");
+            F = double.Parse(Console.ReadLine());
+            C = 5d / 9 * (F - 32);
+            Console.WriteLine(C);
+
+
+        }
+    }
+}
+
+Zadanie 2
+
+using System;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double a,b,c,d;
+            Console.WriteLine("Podaj a");
+            a = double.Parse(Console.ReadLine());
+            Console.WriteLine("Podaj b");
+            b = double.Parse(Console.ReadLine());
+            Console.WriteLine("Podaj c");
+            c = double.Parse(Console.ReadLine());
+            d = b * b - 4 * a * c;
+            Console.WriteLine(d);
+
+
+
+        }
+    }
+}
+
+Zadanie 3
+
+using System;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double m, h, w;
+            Console.WriteLine("Podaj mase w kg: ");
+            m = double.Parse(Console.ReadLine());
+            Console.WriteLine("Podaj wzrost w m: ");
+            h = double.Parse(Console.ReadLine());
+            w = m / (h * h);
+            Console.WriteLine("Twoje BMI wynosi:" +w);
+
+            Console.ReadKey();
+        }
+    }
+}
+
+
+Zadanie 10
+using System;
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int powierzchnia = 100, osoby = 10;
+            double gestoscZaludnienia = (double)osoby / powierzchnia;
+            Console.WriteLine(gestoscZaludnienia);
+        }
+    }
+}
+
+Reszta zadań była do samodzielnego obliczenia wyniku, a następnie skopiowanie kodu i porównanie naszych wyników z poprawnymi, więc rozwiązań do tych zadań nie umieszczam.
