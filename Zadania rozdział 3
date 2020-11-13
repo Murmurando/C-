@@ -421,7 +421,7 @@ namespace ConsoleApp1
         static void Main(string[] args)
         {
             int n,w=0;
-            Console.WriteLine("Podaj mase ciała w kg");
+            Console.WriteLine("Podaj n");
             n = int.Parse(Console.ReadLine());
 
             for(int i=1;i<n;i++)
@@ -438,6 +438,37 @@ namespace ConsoleApp1
             }
            
           
+        }
+    }
+}
+
+Zadanie 3.13:
+using System;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int n, w = 0;
+            Console.WriteLine("Podaj n");
+            n = int.Parse(Console.ReadLine());
+
+            for (int i = 1; i < n; i++)
+            {
+                if (i % 2 == 0)
+                {
+                    w += i;
+                }
+                else
+                {
+                    w -= i;
+                }
+            }
+            Console.Write(w);
+
+
         }
     }
 }
