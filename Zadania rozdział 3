@@ -1,0 +1,412 @@
+Zadanie 3.1:
+using System;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int r;
+            Console.WriteLine("Podaj rok");
+            r = int.Parse(Console.ReadLine());
+
+            if(r%4==0 && r%100!=0)
+            {
+                Console.Write("To jest rok przestępny");
+            }
+            else
+            {
+                Console.Write("Ten rok nie jest przestępny");
+            }
+        }
+    }
+}
+
+Zadanie 3.2:
+using System;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int a,b;
+            Console.WriteLine("Podaj a");
+            a = int.Parse(Console.ReadLine());
+            Console.WriteLine("Podaj b");
+            b = int.Parse(Console.ReadLine());
+
+            if(a%b==0)
+            {
+                Console.Write("Liczba b jest dzielnikiem liczby a");
+            }
+            else
+            {
+                Console.Write("Liczba b nie jest dzielnikiem liczby a");
+            }
+
+
+        }
+    }
+}
+
+Zadanie 3.3:
+using System;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int a,b,c;
+            Console.WriteLine("Podaj a");
+            a = int.Parse(Console.ReadLine());
+            Console.WriteLine("Podaj b");
+            b = int.Parse(Console.ReadLine());
+            Console.WriteLine("Podaj c");
+            c = int.Parse(Console.ReadLine());
+
+            if (a>=b && a>=c)
+            {
+                Console.Write(a);
+            }
+            else if(b>=a && b>=c)
+            {
+                Console.Write(b);
+            }
+            else if (c >= a && c >= b)
+            {
+                Console.Write(c);
+            }
+
+        }
+    }
+}
+
+Zadanie 3.4:
+using System;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double b,c;
+            string a;
+            Console.WriteLine("Podaj a");
+            a = Console.ReadLine();
+            Console.WriteLine("Podaj b");
+            b = double.Parse(Console.ReadLine());
+            Console.WriteLine("Podaj c");
+            c = double.Parse(Console.ReadLine());
+
+            if (a=="+")
+            {
+                Console.Write(b+c);
+            }
+            else if(a=="-")
+            {
+                Console.Write(b-c);
+            }
+            else if (a == "*")
+            {
+                Console.Write(b*c);
+            }
+            else if (a == "/")
+            {
+                Console.Write(b/c);
+            }
+            else
+            {
+                Console.Write("bledny znak");
+            }
+
+
+        }
+    }
+}
+
+Zadanie 3.5:
+using System;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double a,b,c,d;
+            Console.WriteLine("Podaj a");
+            a = double.Parse(Console.ReadLine());
+            Console.WriteLine("Podaj b");
+            b = double.Parse(Console.ReadLine());
+            Console.WriteLine("Podaj c");
+            c = double.Parse(Console.ReadLine());
+
+            d = (3 * (b * b)) - (4 * 2 * a * (c));
+            if(d>0)
+            {
+                Console.Write("Równanie ma 2 pierwiastki");
+            }
+            else if(d==0)
+            {
+                Console.Write("Równanie ma 1 pierwiastek");
+            }
+            else if (d<0)
+            {
+                Console.Write("Równanie nie ma pierwiastków");
+            }
+
+
+        }
+    }
+}
+
+Zadanie 3.6:
+A):
+using System;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double m,w,BMI;
+            Console.WriteLine("Podaj mase ciała w kg");
+            m = double.Parse(Console.ReadLine());
+            Console.WriteLine("Podaj wzrost w m");
+            w = double.Parse(Console.ReadLine());
+
+            BMI = m / (w*w);
+            if(BMI<18.5)
+            {
+                Console.Write("Niedowaga");
+            }
+            else if (BMI >= 25.0)
+            {
+                Console.Write("Nadwaga");
+            }
+            else 
+            {
+                Console.Write("Waga prawidłowa");
+            }
+
+
+        }
+    }
+}
+
+B):
+using System;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double m,w,BMI;
+            Console.WriteLine("Podaj mase ciała w kg");
+            m = double.Parse(Console.ReadLine());
+            Console.WriteLine("Podaj wzrost w m");
+            w = double.Parse(Console.ReadLine());
+
+            BMI = m / (w*w);
+            if(BMI<16.0)
+            {
+                Console.Write("Wygłodzenie");
+            }
+            else if (BMI<16.99 && BMI>16.0)
+            {
+                Console.Write("Wychudzenie");
+            }
+            else if (17.0 < BMI && BMI < 18.49)
+            {
+                Console.Write("Niedowaga");
+            }
+            else if (18.5 < BMI && BMI < 24.99)
+            {
+                Console.Write("Pożądna masa ciała");
+            }
+            else if (30.0 < BMI && BMI < 34.99)
+            {
+                Console.Write("Otyłość I stopnia");
+            }
+            else if (35.0 < BMI && BMI < 39.99)
+            {
+                Console.Write("Otyłość II stopnia (duża)");
+            }
+            else if ( BMI >40)
+            {
+                Console.Write("Otyłość III stopnia (chorobliwa)");
+            }
+          
+
+        }
+    }
+}
+
+Zadanie 3.7:
+using System;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Podaj liczbę z zakresu 1-7");
+            int liczba = int.Parse(Console.ReadLine());
+            switch (liczba)
+            {
+                case 1:
+                    Console.WriteLine("Poniedzialek");
+                    break;
+                case 2:
+                    Console.WriteLine("Wtorek");
+                    break;
+                case 3:
+                    Console.WriteLine("Sroda");
+                    break;
+                case 4:
+                    Console.WriteLine("Czwartek");
+                    break;
+                case 5:
+                    Console.WriteLine("Piatek");
+                    break;
+                case 6:
+                    Console.WriteLine("Sobota");
+                    break;
+                case 7:
+                    Console.WriteLine("Niedziela");
+                    break;
+                default:
+                    Console.WriteLine("Nieznana wartość");
+                    break;
+            }
+            Console.ReadKey();
+
+
+        }
+    }
+}
+
+Zadanie 3.8:
+using System;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double o,s,m=0,n;
+            Console.WriteLine("Podaj liczbe ocen");
+            n = int.Parse(Console.ReadLine());
+
+            for(int i=0;i<n;i++)
+            {
+                Console.WriteLine("Podaj ocene");
+                o = int.Parse(Console.ReadLine());
+
+                m = m+ o;
+            }
+            s = m / n;
+            Console.WriteLine(s);
+            
+            if(s>=2.0 && s<=3.99)
+            {
+                Console.WriteLine("Kwota stypenium wynosi 0 zł");
+            }
+            if (s >= 4.0 && s <= 4.79)
+            {
+                Console.WriteLine("Kwota stypenium wynosi 350 zł");
+            }
+            if (s >= 4.8 && s <= 5.0)
+            {
+                Console.WriteLine("Kwota stypenium wynosi 550 zł");
+            }
+
+
+        }
+    }
+}
+
+Zadanie 3.10:
+using System;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int w = 1;
+            Console.WriteLine("Wprowadź liczbę wierszy");
+            int n = int.Parse(Console.ReadLine());
+            for(int i=1;i<=n;i++)
+            {
+                w = w * i;
+            }
+            Console.WriteLine(w);
+
+        }
+    }
+}
+
+Zadanie 3.11
+using System;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int w = 1,i=0,s=1;
+          
+            do
+            {
+                s = s+i ;
+
+                i++;
+                Console.WriteLine(s);
+            }
+            while (s < 100);
+            Console.WriteLine(i);
+        }
+    }
+}
+
+Zadanie 3.12:
+using System;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int n,s=0;
+          
+            do
+            {
+                Console.WriteLine("Podaj liczbe");
+                n = int.Parse(Console.ReadLine());
+
+                s = s+ n ;
+
+    
+                
+            }
+            while (n!=0);
+            Console.WriteLine(s);
+          
+        }
+    }
+}
