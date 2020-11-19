@@ -58,3 +58,65 @@ namespace ConsoleApp1
         }
     }
 }
+
+Zadanie 3:
+using System;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int j = 0;
+            double s;
+            double suma = 0;
+            int[] elementy = { 19, 34, 23, 54, -2 };
+            int p=0,m=0;
+            int max = elementy[0];
+            int min = elementy[0]; // tymczasowe maksimum
+            for (int i = 0; i < elementy.Length; i++)
+            {
+                if (elementy[i] > max)
+                {
+                    max = elementy[i];
+                    p = i;
+                }
+            }
+            for (int i = 0; i < elementy.Length; i++)
+            {
+
+                if (elementy[i] < min)
+                {
+                   min = elementy[i];
+                   m = i;
+                }
+
+            }
+
+            for (int i = 0; i < elementy.Length; i++)
+            {
+                suma = suma+ elementy[i];
+
+            }
+            s = suma /elementy.Length;
+
+            for (int i = 0; i < elementy.Length; i++)
+            {
+                if (elementy[i] >0)
+                {
+                    j++;
+                }
+
+            }
+
+            Console.WriteLine("Najwiekszy element wynosi:" +max +" i znajduje sie na pozycji: "+p);
+            Console.WriteLine("Najmniejszy element wynosi:" + min + " i znajduje sie na pozycji: " + m);
+            Console.WriteLine("Srednia wynosi: " +s);
+            Console.WriteLine("Ilosc liczb dodatnich: " + j);
+            Console.ReadKey();
+        }
+
+    }
+}
+
