@@ -1,0 +1,19 @@
+Zadanie 1:
+using System;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void oblicz(double F)
+            {
+            double C;
+            C = 5d / 9 * (F - 32);
+            Console.WriteLine(C);
+            }
+        static void Main(string[] args)
+        {
+            oblicz(148);
+        }
+    }
+}
