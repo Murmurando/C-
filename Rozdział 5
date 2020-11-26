@@ -178,3 +178,40 @@ namespace ConsoleApp1
         }
     }
 }
+
+Zadanie 6:
+using System;
+using System.Linq;
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static string[] pomnoz(int x, string[] tab)
+        {
+            for(int i=0;i<3;i++)
+            {
+            tab[i] = String.Concat(Enumerable.Repeat(tab[i], x));
+            Console.WriteLine(tab[i]);
+            }
+            return tab;   
+
+        }
+
+       
+
+        static void Main(string[] args)
+        {
+            int x;
+            string[] tab = { "ala","ola","ara" };
+            Console.WriteLine("Podaj mnoznik tablicy: ");
+            x = int.Parse(Console.ReadLine());
+
+
+            tab = pomnoz(x, tab);
+            
+
+
+
+        }
+    }
+}
