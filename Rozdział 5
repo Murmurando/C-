@@ -215,3 +215,43 @@ namespace ConsoleApp1
         }
     }
 }
+
+
+Zadanie 7:
+using System;
+using System.Linq;
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static int oblicz(int x, int n)
+        {
+            int w=0;
+            for(int i=1;i<=n;i++)
+            {
+                w = w+ (x + i);
+            }
+            return w;   
+
+        }
+
+       
+
+        static void Main(string[] args)
+        {
+            int x,n,w;
+          
+            Console.WriteLine("Podaj wartosc X: ");
+            x = int.Parse(Console.ReadLine());
+            Console.WriteLine("Podaj dlugosc n: ");
+            n = int.Parse(Console.ReadLine());
+
+
+           w=oblicz(x,n);
+           Console.WriteLine($"Wynik: {w}");
+
+
+
+        }
+    }
+}
