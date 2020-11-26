@@ -83,3 +83,56 @@ namespace ConsoleApp1
         }
     }
 }
+
+
+using System;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void pomnoz(int x, int[] tab)
+        {
+            int[] tab2 = new int[5];
+            for(int i=0;i<5;i++)
+            {
+                tab2[i] = tab[i] * x;
+            }
+            for (int i = 0; i < 5; i++)
+            {
+                Console.Write(tab2[i] + " ");
+            }
+
+
+        }
+
+        static int[] pomnoz2(int x, int[] tab)
+        {
+     
+            for (int i = 0; i < 5; i++)
+            {
+                tab[i] = tab[i] * x;
+            }
+            return tab;
+
+        }
+
+        static void Main(string[] args)
+        {
+            int x,wynik;
+            int[] tab = { 1, 2, 4, 8, 10 };
+            Console.WriteLine("Podaj mnoznik tablicy: ");
+            x = int.Parse(Console.ReadLine());
+           
+
+            tab=pomnoz2(x, tab);
+            for(int i=0;i<5;i++)
+            {
+                Console.WriteLine($" {tab[i]}");
+            }
+           
+
+
+        }
+    }
+}
