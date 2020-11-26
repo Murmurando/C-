@@ -84,7 +84,7 @@ namespace ConsoleApp1
     }
 }
 
-
+Zadanie 4:
 using System;
 
 namespace ConsoleApp1
@@ -131,6 +131,48 @@ namespace ConsoleApp1
                 Console.WriteLine($" {tab[i]}");
             }
            
+
+
+        }
+    }
+}
+
+Zadanie 5:
+using System;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void rysuj(int x, int y)
+        {
+
+            for (int i = 0; i < x; i++)
+            {
+                for (int j = 0; j < y; j++)
+                {
+                    Console.Write("*");
+                }
+                Console.WriteLine();
+            }
+
+
+
+        }
+
+        static void Main(string[] args)
+        {
+            int x, y;
+
+            Console.WriteLine("Podaj wysokosc: ");
+            x = int.Parse(Console.ReadLine());
+            Console.WriteLine("Podaj szerokosc: ");
+            y = int.Parse(Console.ReadLine());
+
+
+            rysuj(x, y);
+            rysuj(y, x);
+
 
 
         }
