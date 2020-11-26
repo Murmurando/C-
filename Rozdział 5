@@ -52,3 +52,34 @@ namespace ConsoleApp1
         }
     }
 }
+
+Zadanie 3:
+using System;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static int[] przesun(int x, int y, int[] wek)
+        {
+            wek[0] = wek[0] + x;
+            wek[1] = wek[1] + y;
+
+            return wek;
+        }
+
+        static void Main(string[] args)
+        {
+            int x, y;
+            int[] wek = { 3, 2 };
+            Console.WriteLine("Podaj wpolrzedna punktu X punktu a: ");
+            x = int.Parse(Console.ReadLine());
+            Console.WriteLine("Podaj wpolrzedna punktu Y punktu a: ");
+            y = int.Parse(Console.ReadLine());
+
+            wek = przesun(x, y, wek);
+            Console.WriteLine($"Wspolrzedne punktu A po przesunieciu o wektor(3,2): ({wek[0]},{wek[1]})");
+
+        }
+    }
+}
