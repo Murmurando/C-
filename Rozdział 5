@@ -255,3 +255,38 @@ namespace ConsoleApp1
         }
     }
 }
+
+Zadanie 8:
+using System;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void oblicz(int x)
+        {
+            int wynik = 0;
+            while (x != 0)
+            {
+                wynik += x % 10;
+                x /= 10;
+            }
+
+            Console.Write(wynik);
+
+        }
+        static void Main(string[] args)
+        {
+            int x;
+            Console.Write("Podaj x: ");
+            x = int.Parse(Console.ReadLine());
+
+            oblicz(x);
+
+
+
+        }
+
+
+    }
+}
