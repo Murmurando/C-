@@ -1,0 +1,209 @@
+Zadanie 1:
+using System;
+
+namespace ConsoleApp1
+{
+    class Prostokat
+    {
+
+        private int dlugosc, szerokosc;
+
+        private int powierzchnia()
+        {
+            return dlugosc * szerokosc;
+        }
+        private int obwod()
+        {
+            return 2*(dlugosc+szerokosc);
+
+        }
+        public void Prezentuj()
+        {
+            Console.WriteLine("Pole prostokąta o wymiarach {0}x{1} wynosi {2}", dlugosc, szerokosc, powierzchnia());
+            Console.WriteLine("Obówd prostokąta o wymiarach {0}x{1} wynosi {2}", dlugosc, szerokosc, obwod());
+        }
+
+        public Prostokat(int a, int b)
+        {
+            dlugosc = a;
+            szerokosc = b;
+
+        }
+
+
+        static void Main(string[] args)
+        {
+            Prostokat p = new Prostokat(5, 6);
+            p.Prezentuj();
+
+        }
+
+
+    }
+}
+
+Zadanie 2:
+using System;
+
+namespace ConsoleApp1
+{
+    class Prostokat
+    {
+
+        private int dlugosc, szerokosc;
+
+        private int powierzchnia()
+        {
+            return dlugosc * szerokosc;
+        }
+        private int obwod()
+        {
+            return 2*(dlugosc+szerokosc);
+
+        }
+        public void Prezentuj()
+        {
+            Console.WriteLine("Pole prostokąta o wymiarach {0}x{1} wynosi {2}", dlugosc, szerokosc, powierzchnia());
+            Console.WriteLine("Obówd prostokąta o wymiarach {0}x{1} wynosi {2}", dlugosc, szerokosc, obwod());
+        }
+
+        public Prostokat(int a, int b)
+        {
+            dlugosc = a;
+            szerokosc = b;
+
+        }
+
+
+        static void Main(string[] args)
+        {
+            Prostokat[] prostokaty = new Prostokat[20];
+            Random rand = new Random();
+            for (int i=0; i<prostokaty.Length; i++)
+            {
+                prostokaty[i] = new Prostokat(rand.Next(1, 20), rand.Next(1, 20));
+            }
+            foreach (Prostokat prostokat in prostokaty)
+            {
+                prostokat.Prezentuj();
+            }
+            Console.ReadKey();
+
+        }
+
+
+    }
+}
+
+
+Zadanie 3:
+using System;
+
+
+
+namespace ConsoleApp1
+{
+    class Prostokat
+    {
+
+        private int dlugosc, szerokosc;
+
+        private int powierzchnia()
+        {
+            return dlugosc * szerokosc;
+        }
+        private int obwod()
+        {
+            return 2*(dlugosc+szerokosc);
+
+        }
+        public void Prezentuj()
+        {
+            Console.WriteLine("Pole prostokąta o wymiarach {0}x{1} wynosi {2}", dlugosc, szerokosc, powierzchnia());
+            Console.WriteLine("Obówd prostokąta o wymiarach {0}x{1} wynosi {2}", dlugosc, szerokosc, obwod());
+        }
+
+        public Prostokat(int a, int b)
+        {
+            dlugosc = a;
+            szerokosc = b;
+
+        }
+
+        public static int naj_pow(Prostokat[] prostokaty)
+        {
+            int max = 0;
+            foreach (Prostokat prostokat in prostokaty)
+            {
+                if (prostokat.powierzchnia() > max)
+                    max = prostokat.powierzchnia();
+            }
+            return max;
+        }
+
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Zadanie 3");
+            Prostokat[] prostokaty = new Prostokat[20];
+            Random rand = new Random();
+            for (int i = 0; i < prostokaty.Length; i++)
+            {
+                prostokaty[i] = new Prostokat(rand.Next(1, 20), rand.Next(1, 20));
+            }
+            foreach (Prostokat prostokat in prostokaty)
+            {
+                prostokat.Prezentuj();
+            }
+            Console.WriteLine("Największa powierzchnia : {0}", Prostokat.naj_pow(prostokaty));
+            Console.ReadKey();
+
+        }
+
+
+    }
+}
+
+Zadanie 4:
+
+using System;
+
+
+
+namespace ConsoleApp1
+{
+    class Zuzycie
+    {
+
+        private double zuzycie_poczatkowe;
+        private double zuzycie_koncowe;
+
+        public Zuzycie(double a, double b)
+        {
+            zuzycie_poczatkowe = a;
+            zuzycie_koncowe = b;
+        }
+
+        public string informacje
+        { 
+            get { return "Poczatkowy stan licznika: " + zuzycie_poczatkowe + " Koncowy stan licznika: " + zuzycie_koncowe; } 
+        }
+
+        public double zuzycie 
+        { 
+            get { return zuzycie_koncowe - zuzycie_poczatkowe; } 
+        
+        }
+
+        static void Main(string[] args)
+        {
+            Random rand = new Random();
+            Zuzycie licznik = new Zuzycie(rand.NextDouble() * 20, rand.NextDouble() * 20 + 20);
+            Console.WriteLine(licznik.informacje);
+            Console.WriteLine("Zużycie wynosi: {0}", licznik.zuzycie);
+            Console.ReadKey();
+
+        }
+
+
+    }
+}
