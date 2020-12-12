@@ -252,3 +252,68 @@ namespace ConsoleApp1
     }
 }
 
+Zadanie 6
+
+using  System;
+
+namespace Program
+{
+    public class Punkt
+    {
+        private double x;
+        private double y;
+        public Punkt(double m, double n)
+        {
+            x = m;
+            y = n;
+        }
+        public void Wyswietl()
+        {
+            Console.WriteLine("Wspolrzedne punktu (x,y): ({0},{1})", x, y);
+        }
+        
+        public static bool prosta(Punkt[] punkty)
+        {
+            if (0 < punkty.Length && punkty.Length < 3)
+            {
+                return true;
+            }
+            else
+            {
+                double a, b;
+                a = (punkty[0].y - punkty[1].y) / (punkty[0].x - punkty[1].x);
+                b = punkty[0].y - a * punkty[0].x;
+                for (int i = 2; i < punkty.Length; i++)
+                {
+                    if (punkty[i].y != a * punkty[i].x + b)
+                    {
+                        return false;
+                    }
+                }
+                return true;
+            }
+
+        }
+        static void Main(string[] args)
+        {
+            Punkt[] punkty = new Punkt[3];
+            Console.WriteLine("Sprawdzanie punktów na jednej prostej");
+            punkty[0] = new Punkt(1, 2);
+            punkty[1] = new Punkt(3, 4);
+            punkty[2] = new Punkt(5, 7);
+            foreach (Punkt punkt in punkty)
+            {
+                punkt.Wyswietl();
+            }
+            if (Punkt.prosta(punkty) == true)
+                Console.WriteLine("Punkty leżą na jednej prostej", punkty[0]);
+            else
+                Console.WriteLine("Punkty NIE leżą na jednej prostej");
+
+            Console.ReadKey();
+        }
+
+
+    }   
+}
+
