@@ -207,3 +207,48 @@ namespace ConsoleApp1
 
     }
 }
+
+Zadanie 5:
+
+using System;
+
+namespace ConsoleApp1
+{
+    class Punkt
+    {
+
+        private double x;
+        private double y;
+
+        public Punkt(double x1, double y1)
+        {
+            x = x1;
+            y = y1;
+        }
+
+        public double Get_x { get { return x; } }
+        public double Get_y { get { return y; } }
+
+        public void Przesun(double px, double py)
+        {
+            x += px;
+            y += py;
+        }
+        public void Wyswietl()
+        {
+            Console.WriteLine("Wspolrzedne punktu: ({0},{1})", x, y);
+        }
+
+        static void Main(string[] args)
+        {
+            Punkt pkt = new Punkt(2, 3);
+            pkt.Wyswietl();
+            Console.WriteLine("Przesuniecie punktu o wektor: (1,2)");
+            pkt.Przesun(1, 2);
+            pkt.Wyswietl();
+            Console.ReadKey();
+        }
+
+    }
+}
+
